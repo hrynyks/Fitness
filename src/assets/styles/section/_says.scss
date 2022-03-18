@@ -1,0 +1,131 @@
+.says {
+    padding-bottom: 150px;
+    position: relative;
+
+    @include a (tablet-xl) {
+        padding-bottom: 200px;
+    }
+
+    &-wrap {
+        display: flex;
+        gap: 100px;
+    }
+
+    &__image {
+        @include a (tablet-xl) {
+            display: none;
+        }
+    }
+
+    &__wrap {
+        @include a (tablet-xl) {
+            margin: 0 auto;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 28px;
+
+        @include a (tablet-xl) {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        max-width: 370px;
+        width: 100%;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        right: 23%;
+        top: 40%;
+        background-color: #fff;
+        border-radius: 2px 100px 2px 2px;
+        max-width: 624px;
+        width: 100%;
+        padding: 79px 60px 60px;
+
+        @include a (tablet-xl) {
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &-descr {
+            font-size: toRem(22);
+            font-style: italic;
+            line-height: 160%;
+            color: $medium-color;
+            position: relative;
+            margin-bottom: 39px;
+        }
+
+        &-quotes {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &-name {
+            font-size: toRem(24);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        &__adress {
+            font-size: toRem(18);
+            color: $medium-color;
+        }
+
+        &-bg {
+            position: absolute;
+            right: 20%;
+            bottom: 100px;
+            z-index: -1;
+
+            @include a (tablet-xl) {
+                display: none;
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        @include a (tablet-xl) {
+            display: none;
+        }
+    }
+
+    &__icon {
+        &-1 {
+            position: absolute;
+            top: -50px;
+            left: 125px;
+
+            @include a (tablet) {
+                display: none;
+            }
+        }
+
+        &-2 {
+            position: absolute;
+            right: 25%;
+            top: -50px;
+
+            @include a (tablet) {
+                display: none;
+            }
+        }
+    }
+}

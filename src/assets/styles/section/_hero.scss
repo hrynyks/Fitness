@@ -1,0 +1,153 @@
+.hero {
+    padding: 303px 0 231px;
+    position: relative;
+
+    @include a (tablet) {
+        padding: 250px 0 50px;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+
+        @include a (tablet-xl) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__subtitle {
+        position: relative;
+        padding: 0 40px 0 30px;
+        margin-bottom: 39px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 26px;
+            height: 2px;
+            background-color: $accent-color;
+            left: 0;
+            bottom: 10px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 21px;
+            background: url(/src/assets/images/hero-subtitle-icon.png);
+            right: 0;
+        }
+    }
+
+    &__title {
+        font-size: toRem(80);
+        line-height: 110%;
+        max-width: 472px;
+        width: 100%;
+        margin-bottom: 23px;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+
+        &-bg {
+            font-size: toRem(200);
+            font-weight: 600;
+            color: rgba(255, 38, 37, 0.05);
+            position: absolute;
+            bottom: -160px;
+            left: 10%;
+            z-index: 2;
+
+            @include a (tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__descr {
+        max-width: 470px;
+        width: 100%;
+        margin-bottom: 61px;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 29px;
+
+        @include a (mobile) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__btn {
+        &-right {
+            font-weight: 400;
+            border: 0.75px solid $accent-color;
+            background-color: transparent;
+            color: $dark-color;
+        }
+
+        &-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 128px;
+            height: 128px;
+            background-color: $light-color;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+
+            @include a (tablet-xl) {
+                display: none;
+            }
+        }
+    }
+
+    &__bg {
+        &-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+
+            @include a (tablet) {
+                display: none;
+            }
+        }
+
+        &-left {
+            position: absolute;
+            left: 0;
+            top: 187px;
+
+            @include a (tablet) {
+                display: none;
+            }
+        }
+
+        &-right {
+            position: absolute;
+            right: 0;
+            bottom: -67px;
+            z-index: 2;
+
+            @include a (tablet) {
+                display: none;
+            }
+        }
+    }
+}
